@@ -1,0 +1,42 @@
+{
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"sandboxnet": "access.sandboxnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"contracts": {
+		"HelloWorld": "./contracts/HelloWorld.cdc",
+		"HolidaysNFT": "./contracts/HolidaysNFT.cdc"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "ea334b3bc1ab588486815e2667c2d0f1e14c485433ec510bc7cced4bc7068654"
+		},
+		"testnet-account": {
+			"address": "0xa4ff60ccfe26cef2",
+			"key": {
+				"type": "hex",
+				"index": 0,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "af7fde2a9d1235907386dca0868bd8e3e011f3976d2ea9571eda714b1cd2e068"
+			}
+		}
+	},
+	"deployments": {
+		"emulator": {
+			"emulator-account": [
+				"HelloWorld",
+				"HolidaysNFT"
+			]
+		},
+		"testnet": {
+			"testnet-account": [
+				"HolidaysNFT"
+			]
+		}
+	}
+}
+ 
